@@ -1,0 +1,25 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "accountDs": {
+    "host": "demo.strongloop.com",
+    "port": 3306,
+    "database": "loopback-example-mysql",
+    "username": "demo",
+    "password": "L00pBack",
+    "name": "accountDs",
+    "connector": "mysql"
+  },
+  "ilp": {
+    "host": "127.0.0.1",
+    "port": 3307,
+    "database": "ilp-dev",
+    "username": "root",
+    "password": "",
+    "name": "ilp",
+    "connector": "mysql",
+    "user": "root"
+  }
+}
