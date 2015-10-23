@@ -40,10 +40,6 @@
     "dataSource": "ilp",
     "public": true
   },
-  "IlpClass": {
-    "dataSource": "ilp",
-    "public": true
-  },
   "IlpClassStudents": {
     "dataSource": "ilp",
     "public": true
@@ -111,5 +107,11 @@
   "VwIlpFields": {
     "dataSource": "ilp",
     "public": true
+  },
+  "IlpClass": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

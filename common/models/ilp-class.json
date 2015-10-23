@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "mysql": {
-    "schema": "nssf-ilp-dev",
+    "schema": "ilp-dev",
     "table": "ilp_Class"
   },
   "properties": {
@@ -27,9 +27,57 @@
       },
       "_selectable": false
     },
-    "name": {
+    "description": {
       "type": "String",
       "required": false,
+      "length": 16777215,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "Description",
+        "dataType": "mediumtext",
+        "dataLength": 16777215,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "idSchoolyear": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_SchoolYear",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "grade": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "Grade",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "name": {
+      "type": "String",
+      "required": true,
       "length": 30,
       "precision": null,
       "scale": null,
@@ -39,38 +87,6 @@
         "dataLength": 30,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "description": {
-      "type": "String",
-      "required": false,
-      "length": 65535,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "Description",
-        "dataType": "text",
-        "dataLength": 65535,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "schoolyearId": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "SchoolYear_ID",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
         "nullable": "Y"
       },
       "_selectable": true
