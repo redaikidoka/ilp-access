@@ -48,10 +48,6 @@
     "dataSource": "ilp",
     "public": true
   },
-  "IlpEvidence": {
-    "dataSource": "ilp",
-    "public": true
-  },
   "IlpGoal": {
     "dataSource": "ilp",
     "public": true
@@ -74,10 +70,6 @@
     "dataSource": "ilp",
     "public": true
   },
-  "IlpTeacher": {
-    "dataSource": "ilp",
-    "public": true
-  },
   "IlsConstituentType": {
     "dataSource": "ilp",
     "public": true
@@ -87,16 +79,6 @@
     "public": true
   },
   "IlsFieldQuestions": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "VwClassStudents": {
-    "dataSource": "ilp",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "VwClassStudentsWithIlp": {
     "dataSource": "ilp",
     "public": true
   },
@@ -113,5 +95,25 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "IlpTeacher": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "VwClassTeachers": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "VwClassStudents": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "VwClassStudentsWithIlp": {
+    "dataSource": "ilp",
+    "public": true
   }
 }

@@ -7,3 +7,6 @@ slc arc
 
 ### api explorer
 node .
+
+## Generate lb_services
+lb-ng server/server.js client/lb-services.js

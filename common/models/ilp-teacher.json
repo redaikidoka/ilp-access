@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "mysql": {
-    "schema": "nssf-ilp-dev",
+    "schema": "ilp-dev",
     "table": "ilp_Teacher"
   },
   "properties": {
@@ -43,14 +43,14 @@
       },
       "_selectable": true
     },
-    "nameFirst": {
+    "namefirst": {
       "type": "String",
       "required": true,
       "length": 30,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "Name-First",
+        "columnName": "NameFirst",
         "dataType": "varchar",
         "dataLength": 30,
         "dataPrecision": null,
@@ -59,14 +59,14 @@
       },
       "_selectable": false
     },
-    "nameLast": {
+    "namelast": {
       "type": "String",
       "required": true,
       "length": 50,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "Name-Last",
+        "columnName": "NameLast",
         "dataType": "varchar",
         "dataLength": 50,
         "dataPrecision": null,
@@ -101,6 +101,54 @@
         "columnName": "cohort",
         "dataType": "varchar",
         "dataLength": 20,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "username": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "userName",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "password": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "password",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "thumbnail": {
+      "type": "String",
+      "required": false,
+      "length": 150,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "thumbnail",
+        "dataType": "varchar",
+        "dataLength": 150,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
