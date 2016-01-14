@@ -1,5 +1,5 @@
 {
-  "name": "VwClassStudentsWithIlp",
+  "name": "VwStudents",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,7 +7,7 @@
   },
   "mysql": {
     "schema": "ilp-dev",
-    "table": "vw_class_students_with_ilp"
+    "table": "vw_students"
   },
   "properties": {
     "studentid": {
@@ -90,22 +90,6 @@
       },
       "_selectable": false
     },
-    "gender": {
-      "type": "String",
-      "required": false,
-      "length": 10,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "gender",
-        "dataType": "varchar",
-        "dataLength": 10,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
     "cohort": {
       "type": "String",
       "required": false,
@@ -116,6 +100,22 @@
         "columnName": "cohort",
         "dataType": "varchar",
         "dataLength": 20,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "gender": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "gender",
+        "dataType": "varchar",
+        "dataLength": 10,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
@@ -134,6 +134,86 @@
         "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "ethnicityCode": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 5,
+      "scale": 0,
+      "mysql": {
+        "columnName": "ethnicity_code",
+        "dataType": "smallint",
+        "dataLength": null,
+        "dataPrecision": 5,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "ethnicity": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "ethnicity",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "absences": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "absences",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "age": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "age",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "grade": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "grade",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "Y"
       },
       "_selectable": true
@@ -170,78 +250,14 @@
       },
       "_selectable": true
     },
-    "grade": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "Grade",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "age": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "Age",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "absences": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "Absences",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "hasIlp": {
-      "type": "Number",
-      "required": false,
-      "length": null,
-      "precision": 19,
-      "scale": 0,
-      "mysql": {
-        "columnName": "has_ilp",
-        "dataType": "bigint",
-        "dataLength": null,
-        "dataPrecision": 19,
-        "dataScale": 0,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "intakeDone": {
+    "enrolled": {
       "type": "Number",
       "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "intake_done",
+        "columnName": "enrolled",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -249,57 +265,6 @@
         "nullable": "Y"
       },
       "_selectable": true
-    },
-    "idClass": {
-      "type": "Number",
-      "id": true,
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_class",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "idClassstudentLink": {
-      "type": "Number",
-      "id": true,
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_classstudent_link",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "idSchoolyear": {
-      "type": "Number",
-      "id": true,
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_SchoolYear",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
     },
     "idStudent": {
       "type": "Number",
@@ -317,6 +282,23 @@
         "nullable": "N"
       },
       "_selectable": false
+    },
+    "idSchoolyear": {
+      "type": "String",
+      "id": true,
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "id_schoolyear",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
     }
   },
   "validations": [],

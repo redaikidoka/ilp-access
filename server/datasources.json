@@ -15,10 +15,20 @@
   "ilp": {
     "host": "127.0.0.1",
     "port": 3307,
-    "database": "ilp-dev",
+    "database": "ilp",
     "username": "root",
     "password": "",
     "name": "ilp",
+    "connector": "mysql",
+    "user": "root"
+  },
+  "ilp-dev": {
+    "host": "127.0.0.1",
+    "port": 3307,
+    "database": "ilp-dev",
+    "username": "root",
+    "password": "",
+    "name": "ilp-dev",
     "connector": "mysql",
     "user": "root"
   }

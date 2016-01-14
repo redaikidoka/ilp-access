@@ -32,22 +32,6 @@
     "dataSource": "db",
     "public": false
   },
-  "Ilp": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlpArc": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlpClassStudents": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlpClassTeachers": {
-    "dataSource": "ilp",
-    "public": true
-  },
   "IlpGoal": {
     "dataSource": "ilp",
     "public": true
@@ -60,43 +44,7 @@
     "dataSource": "ilp",
     "public": true
   },
-  "IlpStudent": {
-    "dataSource": "ilp",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "IlpStudentDemo": {
-    "dataSource": "ilp",
-    "public": true
-  },
   "IlsConstituentType": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlsSectionDef": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlsFieldQuestions": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlpField": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "VwIlpFields": {
-    "dataSource": "ilp",
-    "public": true
-  },
-  "IlpClass": {
-    "dataSource": "ilp",
-    "public": true,
-    "$promise": {},
-    "$resolved": true
-  },
-  "IlpTeacher": {
     "dataSource": "ilp",
     "public": true
   },
@@ -106,13 +54,61 @@
     "$promise": {},
     "$resolved": true
   },
-  "VwClassStudents": {
+  "IlsSectionDef": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Ilp": {
     "dataSource": "ilp",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "VwClassStudentsWithIlp": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "IlsApp": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "IlsFieldQuestions": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "IlpField": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "IlsFieldDef": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "VwIlpFields": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "IlpClassStudents": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "VwStudents": {
+    "dataSource": "ilp",
+    "public": true
+  },
+  "IlpTeacher": {
+    "dataSource": "ilp",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "IlpClass": {
     "dataSource": "ilp",
     "public": true
   }

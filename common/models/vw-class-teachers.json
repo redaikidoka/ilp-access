@@ -42,22 +42,6 @@
       },
       "_selectable": true
     },
-    "idSchoolyear": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_SchoolYear",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
     "grade": {
       "type": "Number",
       "required": true,
@@ -100,6 +84,22 @@
       "scale": 0,
       "mysql": {
         "columnName": "id_teacher",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "idSchoolyear": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_SchoolYear",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,

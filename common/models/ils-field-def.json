@@ -1,5 +1,5 @@
 {
-  "name": "VwClassStudents",
+  "name": "IlsFieldDef",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,17 +7,18 @@
   },
   "mysql": {
     "schema": "ilp-dev",
-    "table": "vw_class_students"
+    "table": "ils_field_def"
   },
   "properties": {
-    "idClass": {
+    "idFieldDef": {
       "type": "Number",
+      "id": true,
       "required": true,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "id_class",
+        "columnName": "id_field_def",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -26,46 +27,14 @@
       },
       "_selectable": false
     },
-    "studentid": {
-      "type": "String",
-      "required": true,
-      "length": 20,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "StudentID",
-        "dataType": "varchar",
-        "dataLength": 20,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
     "name": {
-      "type": "String",
-      "required": true,
-      "length": 150,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "Name",
-        "dataType": "varchar",
-        "dataLength": 150,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "nameFirst": {
       "type": "String",
       "required": true,
       "length": 30,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "Name-First",
+        "columnName": "Name",
         "dataType": "varchar",
         "dataLength": 30,
         "dataPrecision": null,
@@ -74,46 +43,62 @@
       },
       "_selectable": false
     },
-    "nameLast": {
+    "description": {
+      "type": "String",
+      "required": false,
+      "length": 65535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "Description",
+        "dataType": "text",
+        "dataLength": 65535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "idFieldType": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_field_type",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "fieldType": {
       "type": "String",
       "required": true,
-      "length": 50,
+      "length": 20,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "Name-Last",
+        "columnName": "field_type",
         "dataType": "varchar",
-        "dataLength": 50,
+        "dataLength": 20,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "N"
       },
       "_selectable": false
     },
-    "dob": {
-      "type": "Date",
-      "required": true,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "DoB",
-        "dataType": "date",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "cohort": {
+    "slug": {
       "type": "String",
       "required": false,
       "length": 20,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "cohort",
+        "columnName": "Slug",
         "dataType": "varchar",
         "dataLength": 20,
         "dataPrecision": null,
@@ -122,136 +107,133 @@
       },
       "_selectable": true
     },
-    "profilepicture": {
+    "idSectionDef": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_Section_def",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "layoutColumn": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "layout_column",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "displayOrder": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "display_order",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "updatesFeed": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "updates_feed",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "feedsTo": {
       "type": "String",
       "required": false,
-      "length": 150,
+      "length": 45,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "profilePicture",
+        "columnName": "feeds_to",
         "dataType": "varchar",
-        "dataLength": 150,
+        "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "fullpicture": {
+    "isRequired": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 3,
+      "scale": 0,
+      "mysql": {
+        "columnName": "is_required",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "displayGroup": {
       "type": "String",
       "required": false,
-      "length": 150,
+      "length": 20,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "fullPicture",
+        "columnName": "display_group",
         "dataType": "varchar",
-        "dataLength": 150,
+        "dataLength": 20,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "grade": {
+    "displayGroupOrder": {
       "type": "Number",
-      "required": true,
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "Grade",
+        "columnName": "display_group_order",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
         "dataScale": 0,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
-    },
-    "age": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "Age",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "absences": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "Absences",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "idClassstudentLink": {
-      "type": "Number",
-      "id": true,
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_classstudent_link",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "idSchoolyear": {
-      "type": "Number",
-      "required": true,
-      "index": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_SchoolYear",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "idStudent": {
-      "type": "Number",
-      "required": true,
-      "index": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_Student",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
+      "_selectable": true
     }
   },
   "validations": [],

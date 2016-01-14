@@ -6,75 +6,10 @@
     "validateUpsert": true
   },
   "mysql": {
-    "schema": "nssf-ilp-dev",
+    "schema": "ilp-dev",
     "table": "ils_Section_def"
   },
   "properties": {
-    "idSectionDef": {
-      "type": "Number",
-      "id": true,
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "id_Section_def",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "name": {
-      "type": "String",
-      "required": false,
-      "length": 30,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "Name",
-        "dataType": "varchar",
-        "dataLength": 30,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "description": {
-      "type": "String",
-      "required": false,
-      "length": 65535,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "Description",
-        "dataType": "text",
-        "dataLength": 65535,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "title": {
-      "type": "String",
-      "required": false,
-      "length": 20,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "Title",
-        "dataType": "varchar",
-        "dataLength": 20,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
     "order": {
       "type": "Number",
       "required": true,
@@ -107,9 +42,74 @@
       },
       "_selectable": true
     },
-    "sectionType": {
+    "idSectionDef": {
+      "type": "Number",
+      "id": true,
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "id_Section_def",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "description": {
+      "type": "String",
+      "required": true,
+      "length": 65535,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "Description",
+        "dataType": "text",
+        "dataLength": 65535,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "active": {
       "type": "String",
       "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "active",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "name": {
+      "type": "String",
+      "required": true,
+      "length": 30,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "Name",
+        "dataType": "varchar",
+        "dataLength": 30,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "sectionType": {
+      "type": "String",
+      "required": true,
       "length": 5,
       "precision": null,
       "scale": null,
@@ -117,6 +117,22 @@
         "columnName": "Section_Type",
         "dataType": "varchar",
         "dataLength": 5,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "title": {
+      "type": "String",
+      "required": true,
+      "length": 20,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "Title",
+        "dataType": "varchar",
+        "dataLength": 20,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"

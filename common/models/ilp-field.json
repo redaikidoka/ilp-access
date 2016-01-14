@@ -6,7 +6,7 @@
     "validateUpsert": true
   },
   "mysql": {
-    "schema": "nssf-ilp-dev",
+    "schema": "ilp-dev",
     "table": "ilp_Field"
   },
   "properties": {
@@ -61,7 +61,7 @@
     },
     "sCreate": {
       "type": "Date",
-      "required": false,
+      "required": true,
       "length": null,
       "precision": null,
       "scale": null,
@@ -71,9 +71,9 @@
         "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "Y"
+        "nullable": "N"
       },
-      "_selectable": true
+      "_selectable": false
     },
     "sUpdate": {
       "type": "Date",
@@ -91,14 +91,14 @@
       },
       "_selectable": false
     },
-    "sIdUser": {
+    "sUserid": {
       "type": "Number",
       "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "s_id_user",
+        "columnName": "s_userid",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,

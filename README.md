@@ -10,3 +10,6 @@ node .
 
 ## Generate lb_services
 lb-ng server/server.js client/lb-services.js
+
+## filter syntax for composer
+{"where": {"idStudent": 23, "idSchoolyear":1}}

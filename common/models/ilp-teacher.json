@@ -6,14 +6,46 @@
     "validateUpsert": true
   },
   "mysql": {
-    "schema": "ilp-dev",
+    "schema": "ilp",
     "table": "ilp_Teacher"
   },
   "properties": {
+    "admin": {
+      "type": "number",
+      "required": false,
+      "length": null,
+      "precision": 1,
+      "scale": null,
+      "mysql": {
+        "columnName": "admin",
+        "dataType": "bit",
+        "dataLength": null,
+        "dataPrecision": 1,
+        "dataScale": null,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "cohort": {
+      "type": "string",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "cohort",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "idTeacher": {
-      "type": "Number",
+      "type": "number",
       "id": true,
-      "required": true,
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
@@ -28,7 +60,7 @@
       "_selectable": false
     },
     "name": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "length": 150,
       "precision": null,
@@ -44,7 +76,7 @@
       "_selectable": true
     },
     "namefirst": {
-      "type": "String",
+      "type": "string",
       "required": true,
       "length": 30,
       "precision": null,
@@ -60,7 +92,7 @@
       "_selectable": false
     },
     "namelast": {
-      "type": "String",
+      "type": "string",
       "required": true,
       "length": 50,
       "precision": null,
@@ -75,56 +107,8 @@
       },
       "_selectable": false
     },
-    "teacherId": {
-      "type": "String",
-      "required": false,
-      "length": 20,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "Teacher_ID",
-        "dataType": "varchar",
-        "dataLength": 20,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "cohort": {
-      "type": "String",
-      "required": false,
-      "length": 20,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "cohort",
-        "dataType": "varchar",
-        "dataLength": 20,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "username": {
-      "type": "String",
-      "required": false,
-      "length": 45,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "userName",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
     "password": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "length": 45,
       "precision": null,
@@ -139,8 +123,24 @@
       },
       "_selectable": true
     },
+    "teacherId": {
+      "type": "number",
+      "required": false,
+      "length": 20,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "Teacher_ID",
+        "dataType": "varchar",
+        "dataLength": 20,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "thumbnail": {
-      "type": "String",
+      "type": "string",
       "required": false,
       "length": 150,
       "precision": null,
@@ -149,6 +149,22 @@
         "columnName": "thumbnail",
         "dataType": "varchar",
         "dataLength": 150,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "username": {
+      "type": "string",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "userName",
+        "dataType": "varchar",
+        "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
