@@ -22,9 +22,14 @@
     "gulp-loopback-sdk-angular": "^0.1.4",
     "jshint": "^2.5.6"
   },
+  "engines": {
+    "node": "0.12.x"
+  },
   "repository": {
     "type": "",
     "url": ""
   },
-  "description": "ilp-access"
+  "description": "Strongloop access point for ILP"
+
 }
+  
